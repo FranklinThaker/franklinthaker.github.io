@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Roboto+Mono&display=swap");
+
+:root {
+  --bg-color: #f4f4f8;
+  --text-color: #333;
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+  --card-bg: #ffffff;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: 60px 0;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.3em;
+  margin: 10px 0 0;
+  font-weight: 300;
+}
+
+nav {
+  background-color: var(--card-bg);
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 700;
+  padding: 10px 20px;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--secondary-color);
+}
+
+section {
+  background-color: var(--card-bg);
+  margin-bottom: 30px;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 10px;
+  margin-top: 0;
+}
+
+.skill-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.skill {
+  background-color: var(--bg-color);
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.progress-bar {
+  background-color: #e0e0e0;
+  height: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  transition: width 1s ease-in-out;
+}
+
+.database-icons {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 2em;
+  color: var(--primary-color);
+}
+
+.database-icons i {
+  transition: transform 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.database-icons i:hover {
+  transform: scale(1.2);
+  color: var(--secondary-color);
+}
+
+.project-card {
+  background-color: var(--bg-color);
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h4 {
+  color: var(--primary-color);
+  margin-top: 0;
+  font-family: "Roboto Mono", monospace;
+}
+
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px 0;
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.social-links a {
+  font-size: 24px;
+  margin: 0 10px;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  header {
+    padding: 40px 0;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.1em;
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
+
+  .nav-link {
+    padding: 8px 16px;
+    margin: 5px;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  .skill-container {
+    grid-template-columns: 1fr;
+  }
+
+  .database-icons {
+    font-size: 1.5em;
+  }
+}
+
+/* Architectures Section */
+.architecture-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.architecture-card {
+  background-color: var(--card-bg);
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.architecture-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.architecture-card h4 {
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 5px;
+}
+
+.architecture-card ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.architecture-card li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.architecture-card li::before {
+  content: "•";
+  color: var(--secondary-color);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@media (max-width: 768px) {
+  .architecture-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card-front {
+    font-weight: bold;
+}
